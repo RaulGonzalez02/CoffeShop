@@ -1,0 +1,23 @@
+.nav__list{
+    display:flex;
+    justify-content: cem;
+    padding: 0;
+}
+
+.nav__item{
+    list-style-type:none;
+}
+
+.nav__link{
+    text-decoration:none;
+    margin: 0 .5rem;
+    color: #fff;
+    font-size: 0.85rem;
+    transition: .2s linear;
+}
+
+.nav__link:hover{
+    color:#d3ad7f;
+    border-bottom: .1rem solid #d3ad7f;
+    padding-bottom: .3rem;
+}

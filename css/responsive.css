@@ -1,0 +1,141 @@
+/*---------------Estilos Responsive------------------*/
+
+@media screen and (min-width:600px) {
+
+    /* header */
+    .header {
+        justify-content: space-around;
+        padding-right: 0;
+    }
+
+    .header__logo {
+        display: block;
+    }
+
+    /* menú */
+    .container__menus {
+        display: block;
+    }
+}
+
+@media screen and (min-width:768px) {
+
+    /* header */
+    .header {
+        justify-content: space-between;
+    }
+
+    .header__icons {
+        display: block;
+    }
+
+    /* blogs */
+    .blogs-card {
+        width: 420px;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .blogs-card__title {
+        display: block;
+    }
+
+    .blogs-card__user {
+        display: block;
+    }
+}
+
+@media screen and (min-width:1024px) {
+
+    /* nosotros */
+    .nosotros__container-img {
+        display: block;
+    }
+
+    .nosotros__contenido {
+        width: 40%;
+    }
+
+    /* clientes */
+    .cliente-card__img {
+        display: block;
+    }
+
+    .cliente-card__stars {
+        display: block;
+    }
+
+    .cliente-card__name {
+        display: block;
+    }
+
+    /* inicio */
+    .inicio__text {
+        display: block;
+    }
+}
+
+@media(min-width:1200px) {
+
+    /* header */
+    .header {
+        position: relative;
+        border: none;
+    }
+
+    .header__logo {
+        display: none;
+    }
+
+    .header__icons {
+        display: none;
+    }
+
+    .header-items {
+        display: none;
+    }
+
+    /* nav */
+    .nav {
+        border-right: 0.1rem solid rgba(255, 255, 255, 0.3);
+        padding: 4rem 3rem 4rem 0;
+    }
+
+    .nav__list {
+        flex-direction: column;
+    }
+
+    .nav__item {
+        margin-bottom: 0.5rem;
+    }
+
+    .nav__link {
+        text-align: left;
+        display: block;
+        padding: 0;
+        margin: 0;
+        transition: transform 1s;
+        font-size: 1.1rem;
+    }
+
+    .nav__link:hover {
+        border: none;
+        transform: translateX(35px) scale(1.3);
+        padding: 0;
+    }
+
+    /* container */
+    .container {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        /* grid-template-rows: repeat (6, 1fr); */
+        grid-template-areas:
+            "header inicio"
+            "blogs blogs"
+            "nosotros nosotros"
+            "clientes clientes"
+            "menus menus"
+            "footer footer";
+    }
+
+}

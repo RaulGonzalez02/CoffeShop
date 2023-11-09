@@ -1,0 +1,167 @@
+/* header con logo, menú y botones busqueda y desplegable */
+.header {
+  background: #010103;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* Para que me lo ponga al 100% */
+  right: 0;
+  padding: 0.5rem 1rem 0.5rem 0.8rem;
+}
+
+.header__logo {
+  display: none;
+  width: 50px;
+}
+
+.header__icons {
+  display: none;
+  color: white;
+  margin-right: 1rem;
+}
+
+.header__icon {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+.header__icon:hover {
+  color: #d3ad7f;
+}
+
+.header-items {
+  position: absolute;
+  top: 100%;
+  right: -50%;
+  width: 250px;
+  background: rgba(255, 255, 255, 0.096);
+}
+
+.header-item-show {
+  animation-name: showitem;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.header-items__btn {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #fff;
+  background: #d3ad7f79;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  font-variant: small-caps;
+  padding: 0.5rem 0;
+  transition: letter-spacing .2s linear;
+}
+
+.header-items__btn:hover {
+  letter-spacing: .2rem;
+}
+
+@keyframes showitem {
+  from {
+    right: -100%;
+  }
+
+  to {
+    right: 0px;
+  }
+}
+
+.header__form {
+  position: absolute;
+  right: 1rem;
+  top: 75px;
+  padding: 0.55rem;
+  width: 300px;
+  border-radius: 0.2rem;
+  background: rgba(255, 255, 255, 0.096);
+  outline: none;
+  border: 2px solid #d3ad7f79;
+  opacity: 0;
+  color: white;
+}
+
+.header__input {
+  padding: 0.55rem;
+  width: 300px;
+  border-radius: 0.2rem;
+  background: rgba(255, 255, 255, 0.096);
+  outline: none;
+  border: 2px solid #d3ad7f79;
+  opacity: 0;
+  color: white;
+}
+
+.header__form::placeholder {
+  color: #f58b09bb;
+}
+
+.header-form-show {
+  animation-name: showform;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showform {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Tajeta desplegable */
+.card-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  border-bottom: 0.01rem solid gray;
+}
+
+.card__img {
+  width: 50px;
+  margin: 0.5rem;
+  transition: transform 0.6s
+}
+
+.card__img:hover {
+  transform: scale(1.3)
+}
+
+.card__price {
+  font-size: 0.85rem;
+  color: #d3ad7f;
+}
+
+.card__price:hover {
+  color: #fff;
+}
+
+.card__title {
+  margin: 0;
+  color: #fff;
+  font-size: 0.9rem;
+  transition: color 0.1s
+}
+
+.card__title:hover {
+  color: #966830;
+}
+
+.fa-times {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  color: #fff;
+}
